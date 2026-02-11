@@ -1,0 +1,37 @@
+// Jenkins Pipeline Demo
+// This pipeline shows a standard CI/CD workflow
+
+pipeline {
+    agent any   // Run on any available Jenkins agent
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                // Pull code from Git repository
+                echo "Checking out source code"
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Simulate build step
+                echo "Building application"
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Simulate automated testing
+                echo "Running tests"
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Simulate deployment
+                echo "Deploying to staging environment"
+            }
+        }
+    }
+}
