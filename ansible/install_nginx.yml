@@ -1,0 +1,16 @@
+---
+# Ansible playbook to install nginx web server
+
+- hosts: all
+  become: yes   # Run with sudo privileges
+
+  tasks:
+    - name: Install nginx package
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start nginx service
+      service:
+        name: nginx
+        state: started
